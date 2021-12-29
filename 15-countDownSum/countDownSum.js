@@ -1,6 +1,13 @@
+const usePromiseLibrary = require("sinon/lib/sinon/util/core/use-promise-library");
+
 class MySolution {
+
   countDownSum(num) {
-    // Insert code here;
+    if (num <= 1) {
+      return num;
+    }
+
+    return this.countDownSum(num - 1) + num;
   }
 }
 
